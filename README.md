@@ -1,4 +1,80 @@
-#PROJEKT 1 - PROGRAM: TEXTOVÝ ANALYZÁTOR
+# 🎯 PROJEKT 1 - PROGRAM: TEXTOVÝ ANALYZÁTOR
+
+main.py: první projekt do Engeto Online Python Akademie
+author: Martina Ježková
+email: jezkova.m94@gmail.com
+------------------------------------------------------------------------------
+## SUMMARY: 
+1. 📝 O PROJEKTU
+2. 🧪 UKÁZKA VÝSTUPU
+3. ⚙️ SPUŠTĚNÍ
+4. 🧾 ZADÁNÍ PROJEKTU - vychozí: from Engeto
+5. 🔁 REFAKTORING A ZLEPŠENÍ
+------------------------------------------------------------------------------
+
+## 1. 📝 O PROJEKTU
+Tento projekt je mým prvním Pythonovým zadáním v rámci
+Engeto Online Python Akademie. Cílem bylo vytvořit konzolovou aplikaci 
+pro analýzu zvoleného textu. Aplikace umožňuje přihlášení uživatele, 
+výběr jednoho ze tří předdefinovaných textů a 
+následně provádí analýzu zvoleného textu.
+
+✨ **Funkcionalita:**
+- Přihlášení uživatele (ověření dle zadaného seznamu)
+- Výběr jednoho ze tří textů
+- Analýza textu:
+  - počet slov
+  - počet slov psaných s velkým počátečním písmenem
+  - počet slov psaných VELKÝMI PÍSMENY
+  - počet slov psaných malými písmeny
+  - počet číselných řetězců a jejich součet
+  - frekvenční tabulka délek slov (textová histogramová vizualizace)
+------------------------------------------------------------------------------
+
+## 2. 🧪 UKÁZKA VÝSTUPU
+Username: mike
+Password: password123
+----------------------------------------
+Welcome to the app, mike
+We have 3 texts to be analyzed.
+----------------------------------------
+Enter a number btw. 1 and 3 to select: 3
+----------------------------------------
+There are 74 words in the selected text.
+There are 4 titlecase words.
+There are 0 uppercase words.
+There are 68 lowercase words.
+There are 2 numeric strings.
+The sum of all the numbers is: 8298
+----------------------------------------
+LEN| OCCURRENCES     |  NR.
+----------------------------------------
+  1|  *               |  1
+  2|  ***********     |  11
+  3|  *************** |  15
+  4|  *********       |  9
+  5|  **********      |  10
+  6|  *****           |  5
+  7|  ***********     |  11
+  8|  ******          |  6
+  9|  ***             |  3
+ 10|  ***             |  3
+------------------------------------------------------------------------------
+
+## 3. ⚙️ SPUŠTĚNÍ:
+
+1. Ujisti se, že máš nainstalovaný Python 3.x
+2. V terminálu přejdi do složky, kde je uložený soubor main.py:
+      ```bash
+      cd /cesta/k/projektu
+      ```bash
+3. Spusť aplikaci:
+      ```bash
+      python main.py
+      ```bash
+------------------------------------------------------------------------------
+
+## 4. 🧾 ZADÁNÍ PROJEKTU: 
 
 Hlavička: 
 """
@@ -119,4 +195,19 @@ LEN|  OCCURENCES  |NR.
 
 Řešení: 
 - v souboru: main.py
-- kód je popsán s komentáři (důvod: pro lepší učení se a snadný pochopení s odstupem času)
+- kód je popsán s komentáři (důvod: pro lepší učení se a snadný pochopení 
+s odstupem času)
+
+------------------------------------------------------------------------------
+
+## 5. 🔁 REFAKTORING A ZLEPŠENÍ:
+
+Původní řešení bylo rozšířeno a vylepšeno v následujících oblastech:
+
+✅ Kód rozdělen do samostatných funkcí pro přehlednost
+✅ Použití typové anotace (-> int, -> tuple[str, str])
+✅ Nahrazení smyček za comprehension výrazy
+✅ Striktní validace vstupu
+✅ Ošetření délky řádku podle PEP 8 (< 79 znaků)
+✅ Detailní a informativní docstringy u každé funkce
+✅ Odstranění zbytečných proměnných a duplikací
